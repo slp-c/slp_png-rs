@@ -1,0 +1,14 @@
+[package]
+name = "slp_png-rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+zlib-rs = "0.6.3"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = 'abort'
+strip = true
